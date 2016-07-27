@@ -21,7 +21,7 @@ const prompt = new InputPrompt(document.querySelector('input'))
 // I want to auto-complete gmail address when user is typing...
 prompt.addRule({
   // execute this rule when input value passed the regular expression
-  test: /[^@]+@^$]+/,
+  test: /[^@]+@[^$]+/,
   handler(input) {
     // how you would like to update the input value
     // here we simply make it a full @gmail.com address
