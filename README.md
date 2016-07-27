@@ -23,7 +23,7 @@ prompt.addRule({
   // execute this rule when input value passed the regular expression
   test: /[^@]+@^$]+/,
   handler(input) {
-    // how you would like to update the prompt text
+    // how you would like to update the input value
     // here we simply make it a full @gmail.com address
     const hint = input.match(/([^@]+@)([^$]+)/)
     if (hint[2][0] === 'g') {
