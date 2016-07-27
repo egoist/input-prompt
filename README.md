@@ -42,6 +42,10 @@ When the prompt shows you can press <kbd>→</kbd> or <kbd>tab</kbd> to apply it
 
 A live example: https://egoistian.com/input-prompt
 
+## List of plugins
+
+You can wrap your rule into a plugin and publish it on npm, if you did you're welcome to add it here.
+
 ## License
 
 MIT © [EGOIST](https://github.com/egoist)
