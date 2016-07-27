@@ -11,6 +11,10 @@ html
       pre {
         background-color: white !important;
       }
+      input {
+        height: 3px 8px;
+        width: 240px;
+      }
   body.hack
     a.github-corner(href='https://github.com/egoist/input-prompt')
     svg(width='80', height='80', viewbox='0 0 250 250', style='fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;')
@@ -22,10 +26,7 @@ html
     .main.container
       h1 Input Prompt - ultra simple text auto-complete utility
       h2 Example
-      form.form
-        fieldset.form-group
-          label(for="email") Email
-          input#email.form-control.prompt(type="email" placeholder="Try to type your Gmail address...")
+      input#email.prompt(type="email" placeholder="Try to type your Gmail address...")
       :marked
         ```js
         const prompt = new InputPrompt(document.querySelector('.prompt'))

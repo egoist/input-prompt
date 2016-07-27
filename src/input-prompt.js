@@ -25,7 +25,10 @@ export default class InputPrompt {
   init() {
     this.wrapper = document.createElement('div')
     this.wrapper.className = 'input-prompt'
-    this.wrapper.style.position = 'relative'
+    css(this.wrapper, {
+      position: 'relative',
+      height: `${this.el.clientHeight}px`
+    })
 
     this.el.parentNode.insertBefore(this.wrapper, this.el)
     this.el.parentNode.removeChild(this.el)
