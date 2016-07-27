@@ -66,8 +66,10 @@
 
     this.el.addEventListener('keydown', function (e) {
       if (e.which === keys.right || e.which === keys.tab) {
-        e.preventDefault()
-        this$1.el.value = this$1.fakeEl.value
+        if (this$1.el.value !== this$1.fakeEl.value) {
+          e.preventDefault()
+          this$1.el.value = this$1.fakeEl.value
+        }
       }
     }, false)
   };
