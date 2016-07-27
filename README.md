@@ -16,7 +16,7 @@ $ npm install --save input-prompt
 const InputPrompt = require('input-prompt')
 
 // which input element to control?
-const prompt = new InputPrompt(document.querySelector('input'))
+const prompt = new InputPrompt(document.getElementById('email'))
 
 // I want to auto-complete gmail address when user is typing...
 prompt.addRule({

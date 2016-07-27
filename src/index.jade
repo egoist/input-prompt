@@ -12,8 +12,9 @@ html
         background-color: white !important;
       }
       input {
-        height: 3px 8px;
+        padding: 3px 8px;
         width: 240px;
+        border: 1px solid #ccc;
       }
   body.hack
     a.github-corner(href='https://github.com/egoist/input-prompt')
@@ -29,7 +30,7 @@ html
       input#email.prompt(type="email" placeholder="Try to type your Gmail address...")
       :marked
         ```js
-        const prompt = new InputPrompt(document.querySelector('.prompt'))
+        const prompt = new InputPrompt(document.getElementById('email'))
         
         prompt.addRule({
           test: /[^@]+@[^$]+/,
@@ -47,8 +48,7 @@ html
     script(src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js")
     script(src="./input-prompt.js?t=#{time}")
     script.
-      var $ = document.querySelector.bind(document)
-      var prompt = new InputPrompt($('.prompt'))
+      var prompt = new InputPrompt(document.getElementById('email'))
       prompt.addRule({
         test: /[^@]+@[^$]+/,
         handler: function (input) {

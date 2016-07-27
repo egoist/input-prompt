@@ -40,7 +40,7 @@ export default class InputPrompt {
     })
 
     this.fakeEl = document.createElement(this.el.tagName)
-    this.fakeEl.className = this.el.className
+    this.fakeEl.className = `${this.el.className} fake-input`
     css(this.fakeEl, {
       position: 'absolute',
       left: `${this.el.offsetLeft}px`,
