@@ -56,8 +56,10 @@ export default class InputPrompt {
 
     this.el.addEventListener('keydown', e => {
       if (e.which === keys.right || e.which === keys.tab) {
-        e.preventDefault()
-        this.el.value = this.fakeEl.value
+        if (this.el.value !== this.fakeEl.value) {
+          e.preventDefault()
+          this.el.value = this.fakeEl.value
+        }
       }
     }, false)
   }
