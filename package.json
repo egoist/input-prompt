@@ -15,7 +15,8 @@
   "scripts": {
     "test": "xo src/*.js",
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "gh": "gh-pages -d demo"
   },
   "files": [
     "dist"
