@@ -1,0 +1,18 @@
+{
+  "before_tests": "npm run build && browserify test/test.js -o browserified.js",
+  "framework": "mocha+chai",
+  "launchers": {
+    "Node": {
+      "command": "mocha test/test.js -R tap",
+      "protocol": "tap"
+    }
+  },
+  "src_files": [
+    "src/*.js"
+  ],
+  "serve_files": [
+    "dist/input-prompt.min.js",
+    "browserified.js"
+  ],
+  "on_exit": "rm browserified.js"
+}
