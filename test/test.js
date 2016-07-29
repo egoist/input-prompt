@@ -40,4 +40,25 @@ describe('main', function () {
 
     expect(example.querySelector('.fake-input').value).to.equal('foo')
   })
+
+  it('update prompt when rule matches', function () {
+    var example = createExample()
+
+    var input = document.createElement('input')
+    example.appendChild(input)
+
+    var prompt = new InputPrompt(input)
+    prompt.addRule({
+      test: /^g$/,
+      handler: function () {
+        return 'google'
+      }
+    })
+    prompt.init()
+
+    input.value = 'g'
+    simulate(input, 'input')
+
+    expect(example.querySelector('.fake-input').value).to.equal('google')
+  })
 })
