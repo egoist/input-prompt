@@ -16,5 +16,12 @@
     "dist/input-prompt.min.js",
     "browserified.js"
   ],
-  "on_exit": "rm browserified.js"
+  "on_exit": "rm browserified.js",
+  "launch_in_dev": [
+    "Chrome"
+  ],
+  "launch_in_ci": [
+    "Firefox",
+    "Chrome"
+  ]
 }
