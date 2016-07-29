@@ -5,6 +5,8 @@ machine:
 test:
   pre:
     - npm install -g browserify testem
+  override:
+    - npm run test:ci
 
 general:
   branches:

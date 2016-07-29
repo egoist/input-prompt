@@ -13,7 +13,8 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo src/*.js && testem ci",
+    "test": "xo src/*.js && testem",
+    "test:ci": "xo src/*.js && testem ci",
     "dev": "gulp",
     "build": "gulp build",
     "gh": "gh-pages -d demo"
