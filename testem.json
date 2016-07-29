@@ -16,6 +16,5 @@
     "dist/input-prompt.min.js",
     "browserified.js"
   ],
-  "on_exit": "rm browserified.js",
-  "launch_in_dev": ["PhantomJS"]
+  "on_exit": "rm browserified.js"
 }

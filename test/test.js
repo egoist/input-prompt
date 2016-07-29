@@ -61,4 +61,26 @@ describe('main', function () {
 
     expect(example.querySelector('.fake-input').value).to.equal('google')
   })
+
+  it('auto-complete with keydown event', function () {
+    var example = createExample()
+
+    var input = document.createElement('input')
+    example.appendChild(input)
+
+    var prompt = new InputPrompt(input)
+    prompt.addRule({
+      test: /^g$/,
+      handler: function () {
+        return 'google'
+      }
+    })
+    prompt.init()
+
+    input.value = 'g'
+    simulate(input, 'input')
+    simulate(input, 'keydown', {which: 39})
+
+    expect(input.value).to.equal('google')    
+  })
 })
