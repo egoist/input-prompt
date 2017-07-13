@@ -10,7 +10,7 @@
         <div class="column column-40">
           <input ref="email" class="prompt" type="email" placeholder="Try to type your Gmail address...">
           <p class="tip">
-            Press <kbd>→</kbd> or <kbd>Enter</kbd> when prompt shows.
+            Press <kbd>→</kbd> or <kbd>tab</kbd> when prompt shows.
           </p>
         </div>
       </div>
