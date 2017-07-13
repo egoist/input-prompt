@@ -1,9 +1,0 @@
-machine:
-  node:
-    version: 8
-
-general:
-  branches:
-    ignore:
-      - gh-pages # list of branches to ignore
-      - /release\/.*/
