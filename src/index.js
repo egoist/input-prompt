@@ -15,16 +15,14 @@ export default class InputPrompt {
     this.rules = []
   }
 
-  addRule({test, handler}) {
-    this.rules.push({
-      test,
-      handler
-    })
+  addRule(rule) {
+    this.rules.push(rule)
   }
 
   init() {
     this.wrapper = document.createElement('div')
     this.wrapper.className = 'input-prompt'
+
     css(this.wrapper, {
       position: 'relative',
       height: `${this.el.clientHeight}px`
@@ -52,7 +50,7 @@ export default class InputPrompt {
     this.el.addEventListener('input', e => {
       this.currentValue = e.target.value
       this.applyRule()
-    }, false)
+    })
 
     this.el.addEventListener('keydown', e => {
       if (e.which === keys.right || e.which === keys.tab) {
@@ -61,14 +59,18 @@ export default class InputPrompt {
           this.el.value = this.fakeEl.value
         }
       }
-    }, false)
+    })
   }
 
   applyRule() {
     let result = this.currentValue
     this.rules.forEach(rule => {
-      if (rule.test.test(this.currentValue)) {
-        result = rule.handler(result)
+      const matched = rule.match.exec(this.currentValue)
+      if (matched) {
+        const handled = rule.handler(matched)
+        if (handled != null && handled !== false) {
+          result = handled
+        }
       }
     })
     this.fakeEl.value = result

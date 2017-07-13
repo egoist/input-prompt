@@ -1,12 +1,6 @@
 machine:
   node:
-    version: 5
-
-test:
-  pre:
-    - npm install -g browserify testem
-  override:
-    - npm run test:ci
+    version: 8
 
 general:
   branches:

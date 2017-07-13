@@ -12,35 +12,9 @@ $ npm install --save input-prompt
 
 ## Usage
 
-```js
-const InputPrompt = require('input-prompt')
-
-// which input element to control?
-const prompt = new InputPrompt(document.getElementById('email'))
-
-// I want to auto-complete gmail address when user is typing...
-prompt.addRule({
-  // execute this rule when input value passed the regular expression
-  test: /[^@]+@[^$]+/,
-  handler(input) {
-    // how you would like to update the input value
-    // here we simply make it a full @gmail.com address
-    const hint = input.match(/([^@]+@)([^$]+)/)
-    if (hint[2][0] === 'g') {
-      return `${hint[1]}gmail.com`
-    }
-    return input
-  }
-})
-
-// initial the element
-prompt.init()
-// cheers! 🍻
-```
+Demo and usage are at https://egoist.moe/input-prompt
 
 When the prompt shows you can press <kbd>→</kbd> or <kbd>tab</kbd> to apply it to the real `input` element.
-
-A live example: https://egoistian.com/input-prompt
 
 ## List of plugins
 
