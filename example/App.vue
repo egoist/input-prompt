@@ -4,10 +4,10 @@
     <h1><span>Input Prompt</span> - ultra simple text auto-complete utility</h1>
     <div class="preview">
       <div class="row">
-        <div class="column column-50">
+        <div class="column column-60">
           <prism class="example" language="javascript">{{ example }}</prism>
         </div>
-        <div class="column column-50">
+        <div class="column column-40">
           <input ref="email" class="prompt" type="email" placeholder="Try to type your Gmail address...">
         </div>
       </div>
@@ -44,7 +44,7 @@ const prompt = new InputPrompt(document.getElementById('email'))
 prompt.addRule({
   // execute this rule when input value matches the regular expression
   match: /([^@]+@)([^$]+)/,
-  // return expected tip based on macthed info
+  // return expected tip based on matched info
   handler(matched) {
     const RE = new RegExp('^' + matched[2])
     let result
