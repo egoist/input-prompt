@@ -9,6 +9,9 @@
         </div>
         <div class="column column-40">
           <input ref="email" class="prompt" type="email" placeholder="Try to type your Gmail address...">
+          <p class="tip">
+            Press <kbd>→</kbd> or <kbd>Enter</kbd> when prompt shows.
+          </p>
         </div>
       </div>
     </div>
@@ -102,6 +105,20 @@ body {
   box-sizing: border-box;
 }
 
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+
 h1 {
   margin-bottom: 30px;
 }
@@ -142,5 +159,10 @@ pre.example {
   background-color: white;
   margin: 0;
   padding: 0;
+}
+
+.tip {
+  color: #666;
+  font-size: 13px;
 }
 </style>
