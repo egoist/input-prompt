@@ -22,7 +22,8 @@
   ],
   "poi": {
     "entry": "example/index.js",
-    "dist": "example/dist"
+    "dist": "example/dist",
+    "homepage": "/input-prompt/"
   },
   "main": "dist/input-prompt.common.js",
   "unpkg": "dist/input-prompt.min.js",
