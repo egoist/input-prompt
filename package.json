@@ -1,6 +1,6 @@
 {
   "name": "input-prompt",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Input prompt with auto-completion.",
   "license": "MIT",
   "repository": "egoist/input-prompt",
@@ -53,6 +53,8 @@
       "eqeqeq": 0,
       "no-eq-null": 0
     },
-    "ignores": ["example/**"]
+    "ignores": [
+      "example/**"
+    ]
   }
 }
